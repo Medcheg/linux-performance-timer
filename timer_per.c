@@ -7,9 +7,6 @@ unsigned long t[2];
 timing;
 
 #define timing_now(x) asm volatile(".byte 15;.byte 49" : "=a"((x)->t[0]),"=d"((x)->t[1]))
-#define timing_diff(x,y) \
-        (((x)->t[0] - (double) (y)->t[0]) / 3401000000.0 \
-        + (4294967296.0/3401000000.0) * ((x)->t[1] - (double) (y)->t[1]))
 
 #define timing_diff_ticks(x,y) \
         (((x)->t[0] - (double) (y)->t[0]) \
