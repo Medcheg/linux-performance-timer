@@ -1,10 +1,9 @@
 CXX = gcc
 CXX_FLAGS = -g -Wall
-V9_FLAG = 
-LD_FLAGS =
+BIN_NAME = "timer_per"
 
 all:
-	$(CXX) $(V9_FLAG) -lm -O3 -o timer_per timer_per.c
+	$(CXX) $(CXX_FLAGS) -lm -O3 -o $(BIN_NAME) timer_per.c
 
-clean :
-	\rm -fr *.o *~ aes_attack describe_key aes_test
+clean:
+	rm -rf *.o *~ *$(BIN_NAME)
