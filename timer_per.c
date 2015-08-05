@@ -33,6 +33,6 @@ int main() {
         timing_now(&tend);
         t2 = timing_diff_ticks(&tend, &tstart);
 
-        printf("proccessor ticks for empty measurement: %.0f \t proccessor ticks for sleep(100): %.0f proc frec ??? = %.0f\n", t1, t2, t2);///(i*100.0/1e6)
+        printf("proccessor ticks for empty measurement: %.0f \t proccessor ticks for sleep(1): %.0f proc frec ??? = %.0f\n", t1, t2, t2);///(i*100.0/1e6)
     }
 }
